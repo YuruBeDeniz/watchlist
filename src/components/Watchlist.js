@@ -13,11 +13,14 @@ const Watchlist = () => {
         <h1 className='heading'>My Watchlist</h1>
       </div>
 
-      <div className='movie-grid'>
+      {watchlist.length > 0 ?
+        <div className='movie-grid'>
         {watchlist.map(movie => (
           <MovieCard movie={movie} type="watchlist"/>
         ))}
-      </div>
+      </div> : 
+      <h2 className='no-movies'>No movies in your list!</h2> 
+      }
      </div> 
     </div>
   )
